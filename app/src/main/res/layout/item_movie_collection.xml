@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:id="@+id/layout_container"
+    >
+
+    <ImageView
+        android:id="@+id/img_collection_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg_transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAlpha01"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_collection_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나만의 컬렉션"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tv_collection_item_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="20 movies" />
+    </LinearLayout>
+</RelativeLayout>

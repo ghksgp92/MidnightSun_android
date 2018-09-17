@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.movie.CommentEditActivity">
+
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="#오션스8"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_add_photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사진도 함께 올리시겠어요?"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_posting_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            android:background="@drawable/bg_transparent"
+            android:text="6월 개봉하는 기대작! 원작개념인 오션스 일레븐도 엄청 재밌게 봤어요"
+            android:padding="12dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

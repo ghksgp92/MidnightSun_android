@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="4dp"
+    android:background="@color/menuBackgroundColor"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_menu_etc"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_bottom_menu_etc"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_menu_etc_off"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_label_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bottom_menu_etc"
+            android:textSize="12sp"
+            android:text="ETC"
+            android:textColor="@color/menuTextColor"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_menu_community"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_bottom_menu_community"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_menu_community_off"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_label_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bottom_menu_community"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:text="POSTING"
+            android:textColor="@color/menuTextColor"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_menu_home"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_bottom_menu_home"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_menu_home_off"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_label_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bottom_menu_home"
+            android:textSize="12sp"
+            android:text="MOVIE"
+            android:textColor="@color/menuTextColor"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_menu_recommend"
+        android:layout_weight="5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_bottom_menu_recommend"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_menu_recommend_off"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_label_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bottom_menu_recommend"
+            android:textSize="12sp"
+            android:text="RECOMMEND"
+            android:textColor="@color/menuTextColor"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom_menu_my_page"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_bottom_menu_my_page"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_menu_my_page_off"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_bottom_menu_label_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_bottom_menu_my_page"
+            android:textSize="12sp"
+            android:text="MY"
+            android:textColor="@color/menuTextColor"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

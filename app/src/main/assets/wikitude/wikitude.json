@@ -1,0 +1,19 @@
+[
+    {
+        "category_name": "Video",
+        "samples": [
+            {
+                "name": "포스터 인식 후 예고편 재생",
+                "path": "MovieTrailer/index.html",
+                "requiredFeatures": [
+                    "image_tracking"
+                ],
+                "startupConfiguration": {
+                    "camera_resolution": "auto",
+                    "camera_position": "back"
+                }
+            }
+
+        ]
+    }
+]

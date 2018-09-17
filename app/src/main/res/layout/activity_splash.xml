@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hyunju.jin.movie.activity.SplashActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient01"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="Midnight sun"
+        android:fontFamily="@font/design_house_light"
+        android:textSize="48sp"
+        android:textColor="@color/colorAlpha02"
+        />
+</LinearLayout>
+

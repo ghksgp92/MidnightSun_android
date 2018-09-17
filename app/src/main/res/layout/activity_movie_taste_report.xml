@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.recommend.MovieTasteReportActivity"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_top_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/menuBackgroundColor"
+                >
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:srcCompat="@drawable/ic_movie_taste_report" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/pointColor"
+                        tools:text="ghksgp92" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="님이 보신" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_movie_rating_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/pointColor"
+                        tools:text="108" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="개의 영화를 기반으로 한" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="영화 취향 보고서입니다." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:text="* 매일 12시에 업데이트됩니다." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/layout_view_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="visible"
+                    >
+
+                    <!-- 별점분포 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:text="별점분포"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/menuBackgroundColor"
+                        tools:visibility="visible"
+                        android:paddingTop="4dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout_rating_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_horizontal"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="36dp"
+                                    android:gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tv_total_rating_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="90"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="총 별점 수"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="36dp"
+                                    android:gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tv_max_rating_category"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3.0"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="많이 준 평점"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="12dp"
+                                    android:gravity="center"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/tv_rating_average"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3.5"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="평점 평균"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <org.eazegraph.lib.charts.ValueLineChart
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/chart_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:layout_marginTop="12dp"
+                                app:egUseCubic="true"
+                                app:egUseOverlapFill="true"
+                                app:egCurveSmoothness="0.5"
+                                app:egIndicatorLineColor="#fe8080"
+                                app:egIndicatorTextColor="#fe8080"
+                                app:egLegendHeight="40dp"
+                                app:egIndicatorTopPadding="0dp"
+                                app:egShowStandardValue="true"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_error_rating_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            >
+                            <TextView
+                                android:id="@+id/tv_error_msg_rating_report"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:visibility="gone"
+                                android:text="(!) 보고서 로드 실패"
+                                />
+                        </LinearLayout>
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            style="@style/AVLoadingIndicatorView"
+                            android:id="@+id/loading_indicator_rating_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:indicatorName="BallClipRotateIndicator"
+                            app:indicatorColor="@color/pointColor"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            />
+                    </FrameLayout>
+
+                    <!-- 선호태그 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="선호태그"
+                        android:padding="12dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/menuBackgroundColor">
+
+                        <LinearLayout
+                            android:id="@+id/layout_tag_cloud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="가장 많이 본 영화태그를 보여드릴게요."
+                                android:layout_marginBottom="8dp"
+                                android:padding="8dp"
+                                />
+
+                            <com.hyunju.jin.movie.extlib.wordcloud.WordCloudView
+                                android:id="@+id/word_cloud_movie_tag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_error_tag_cloud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_error_msg_tag_cloud"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:visibility="gone"
+                                android:text="- 선호태그 정보가 없습니다."
+                                />
+                        </LinearLayout>
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            style="@style/AVLoadingIndicatorView"
+                            android:id="@+id/loading_indicator_tag_cloud"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:indicatorName="BallClipRotateIndicator"
+                            app:indicatorColor="@color/pointColor"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            />
+
+                    </FrameLayout>
+
+
+                    <!-- 선호배우 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="선호배우"
+                        android:padding="12dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/menuBackgroundColor"
+                        android:padding="4dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout_favorite_actor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_favorite_actors"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_error_favorite_actor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_error_msg_favorite_actor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:visibility="gone"
+                                android:text="- 선호배우 정보가 없습니다."
+                                />
+
+                        </LinearLayout>
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            style="@style/AVLoadingIndicatorView"
+                            android:id="@+id/loading_indicator_favorite_actor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:indicatorName="BallClipRotateIndicator"
+                            app:indicatorColor="@color/pointColor"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            />
+
+                    </FrameLayout>
+
+                    <!-- 선호감독 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="선호감독"
+                        android:padding="12dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:background="@color/menuBackgroundColor">
+
+                        <LinearLayout
+                            android:id="@+id/layout_director_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_directors"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_error_director_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_error_msg_favorite_director"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:visibility="gone"
+                                android:text="- 선호감독 정보가 없습니다."
+                                />
+
+                        </LinearLayout>
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            style="@style/AVLoadingIndicatorView"
+                            android:id="@+id/loading_indicator_director_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:indicatorName="BallClipRotateIndicator"
+                            app:indicatorColor="@color/pointColor"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            />
+                    </FrameLayout>
+
+                    <!-- 추천친구 보고서 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:text="추천친구"
+                        android:padding="12dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/menuBackgroundColor"
+                        android:padding="4dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout_recommend_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_recommend_users"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_error_recommend_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="80dp"
+                            android:orientation="vertical"
+                            tools:visibility="visible"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_error_msg_recommend_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:visibility="gone"
+                                android:text="- 추천친구가 없습니다."
+                                />
+                        </LinearLayout>
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            style="@style/AVLoadingIndicatorView"
+                            android:id="@+id/loading_indicator_recommend_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:indicatorName="BallClipRotateIndicator"
+                            app:indicatorColor="@color/pointColor"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- 사용자 평점 수를 가져오는데 실패한 경우 보여지는 레이아웃 -->
+    <include layout="@layout/layout_error" />
+
+    <!-- 사용자 평점 수를 가져오는 동안 보이는 프로그래스바 -->
+    <com.wang.avi.AVLoadingIndicatorView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/AVLoadingIndicatorView"
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorName="BallClipRotateIndicator"
+        app:indicatorColor="@color/pointColor"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</FrameLayout>

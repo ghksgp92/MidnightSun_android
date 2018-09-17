@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.hyunju.jin.movie.camera.gvision.CameraSourcePreview
+      android:id="@+id/camera_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+        <com.hyunju.jin.movie.camera.gvision.GraphicOverlay
+          android:id="@+id/faceOverlay"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+    </com.hyunju.jin.movie.camera.gvision.CameraSourcePreview>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout_camera_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/img_face_detect_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_face"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/img_face_swap_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_face_change"
+                android:layout_gravity="bottom"
+                android:layout_toRightOf="@+id/img_face_detect_camera"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/img_camera_shot"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_shot"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/img_camera_filter"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_filter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/layout_face_filter_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAlpha02"
+            tools:visibility="visible"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_filter_none"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:textColor="@color/white"
+                    android:background="#aa000000"
+                    android:text="필터없음"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:layout_marginRight="8dp"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btn_mask1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#aa000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/face_mask1_preview" />
+
+                <ImageButton
+                    android:id="@+id/btn_mask2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:background="#aa000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/face_mask2_preview" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/btn_mask3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#aa000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/face_mask3_preview" />
+
+                <ImageButton
+                    android:id="@+id/btn_mask4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#aa000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/face_mask4_preview" />
+
+                <ImageButton
+                    android:id="@+id/btn_mask5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:background="#aa000000"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/face_mask5_preview" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

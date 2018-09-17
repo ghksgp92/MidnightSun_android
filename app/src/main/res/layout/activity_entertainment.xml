@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.entertainment.EntertainmentActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영화관에서 영화 기다리기 지루한 당신을 위해 준비했어요."
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="12dp"
+                android:background="@color/menuBackgroundColor"
+                />
+
+            <RelativeLayout
+                android:id="@+id/layout_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_camera"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:layout_marginRight="12dp"
+                    app:srcCompat="@drawable/ic_camera"/>
+
+                <TextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="카메라"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/img_camera"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이미지 필터, 얼굴필터, 얼굴 바꾸기 카메라를\n사용해보세요^-^"
+                    android:layout_below="@+id/tv_camera"
+                    android:layout_toRightOf="@+id/img_camera"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_ar_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                >
+                <ImageView
+                    android:id="@+id/img_ar_poster"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:layout_marginRight="12dp"
+                    app:srcCompat="@drawable/ic_ar_poster"/>
+
+                <TextView
+                    android:id="@+id/tv_ar_poster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AR 예고편 재생"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/img_ar_poster"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="영화 포스터를 인식하면 예고편을 볼 수 있어요!"
+                    android:layout_below="@+id/tv_ar_poster"
+                    android:layout_toRightOf="@id/img_ar_poster"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_ar_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                >
+                <ImageView
+                    android:id="@+id/img_ar_test"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:layout_marginRight="12dp"
+                    app:srcCompat="@drawable/ic_ar_whale"/>
+
+                <TextView
+                    android:id="@+id/tv_ar_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AR 캐릭터"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/img_ar_test"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="영화 포스터를 인식하면 귀여운 돌고래 친구들을 만날 수 있어요!"
+                    android:layout_below="@+id/tv_ar_test"
+                    android:layout_toRightOf="@id/img_ar_test"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_santa_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                >
+                <ImageView
+                    android:id="@+id/img_santa_game"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="4dp"
+                    android:layout_marginRight="12dp"
+                    app:srcCompat="@drawable/ic_santa"/>
+
+                <TextView
+                    android:id="@+id/tv_santa_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2D 게임 : 산타의 모험"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/img_santa_game"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="장애물과 좀비를 피해 \n산타가 선물을 다시 찾을 수 있게 도와주세요!"
+                    android:layout_below="@+id/tv_santa_game"
+                    android:layout_toRightOf="@id/img_santa_game"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <!-- 하단 메뉴 -->
+    <include layout="@layout/layout_main_bottom_menu"/>
+</LinearLayout>

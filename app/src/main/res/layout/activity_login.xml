@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hyunju.jin.movie.activity.user.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient01">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="Commentary"
+        android:fontFamily="@font/pacifico"
+        android:textSize="60sp"
+        android:textColor="@color/colorAlpha02"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <EditText
+            android:id="@+id/ed_login_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="14dp"
+            android:hint="id 입력"
+            android:background="@drawable/round_filled_01"
+            android:textColorHint="@color/defaultGrey"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            />
+
+        <EditText
+            android:id="@+id/ed_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="12dp"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword"
+            android:background="@drawable/round_filled_01"
+            android:textColorHint="@color/defaultGrey"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_forgot_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="비밀번호를 잊으셨나요?"
+            android:textColor="@color/white"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="right"
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textColor="@color/defaultGrey"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border_round_02"
+            />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_sign_in_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="가입하기"
+        android:padding="16dp"
+        android:gravity="center"
+        />
+
+
+</LinearLayout>

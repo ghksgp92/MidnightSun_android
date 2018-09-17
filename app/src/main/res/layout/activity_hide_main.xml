@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hyunju.jin.movie.HideMainActivity"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메인화면" />
+
+    <Button
+        android:id="@+id/btn_user_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사용자 로그인 시 메인 화면" />
+
+    <Button
+        android:id="@+id/btn_hls_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="exoplayer 샘플 재생" />
+
+
+    <EditText
+        android:id="@+id/tv_hls_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="10sp"
+        android:hint="재생할 HLS URL 입력"
+        android:text="http://183.111.227.218/hls/HarryPotterAndTheSorcerersStone/HarryPotterAndTheSorcerersStone.m3u8" />
+
+    <Button
+        android:id="@+id/btn_vod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="영화 재생" />
+
+    <org.wysaid.view.ImageGLSurfaceView
+        android:id="@+id/gl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp" />
+
+
+</LinearLayout>
+
+

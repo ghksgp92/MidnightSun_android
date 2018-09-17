@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.hyunju.jin.movie"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            moduleName "dlib"
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            ext.enableCrashlytics = false // fabric 을 사용하지 않도록 설정
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation(name: 'wikitudesdk', ext: 'aar')
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // 구글이 코틀린을 지원하는 이유는 JAVA의 제로데이 문제 때문. jre가 아닌 jdk를 추가해야한다.
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'   // 구글 연동 로그인
+    implementation 'com.google.android.gms:play-services-vision:15.0.2'
+    implementation 'com.google.firebase:firebase-messaging:15.0.2'
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.1'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    implementation 'pub.devrel:easypermissions:1.2.0' // 안드로이드 권한 요청 라이브러리
+    implementation project(':editor') // 포스팅 글쓰기 에디터
+
+    /*
+    *   Custom View 와 관련된 외부 라이브러리 및 모듈 추가
+    */
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.github.medyo:fancybuttons:1.8.4'    // 버튼 (아이콘, 둥근모서리) 제거하자
+    implementation 'us.belka:androidtoggleswitch:1.2.2' // 토글버튼
+
+    // font 아이콘 라이브러리
+    implementation "com.mikepenz:iconics-core:3.0.4@aar"
+    implementation "com.mikepenz:iconics-views:3.0.4@aar"
+    implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
+
+    implementation 'com.github.adroitandroid:ChipCloud:2.2.1' // 텍스트를 태그처럼 보여주고 선택가능하도록 하는 레이아웃
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3' // 이어보기 프로그래스 바
+
+    implementation project(':cameraLibrary') // 이미지 필터
+    implementation project(':openCVLibrary')
+
+    implementation 'org.tensorflow:tensorflow-android:1.8.0'
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation 'net.alhazmy13.wordcloud:library:0.2.0-beta' // 태그 클라우드
+
+    // EazeGraph 라이브러리
+    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    // multi index 문제 해결
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // Janus WebRTC API 추가
+    implementation project(':janusclientapi')
+
+    // 이어보기, 이미지 검색에서 사용하는 다이얼로그
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

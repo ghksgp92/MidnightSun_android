@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.user.MyWalletActivity"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            style="@style/TopMenuStyle">
+
+            <ImageView
+                android:id="@+id/img_logout"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_back"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 지갑"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/img_recommend"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_menu_recommend_off"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_refresh"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+
+            <ImageView
+                android:id="@+id/img_refresh"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_refresh"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_movie"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="12dp"
+            app:contentPadding="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/defaultTextColor"
+            app:cardElevation="4dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="ghksgp92"
+                android:textSize="20sp"
+                android:textColor="@color/pointColor"
+                />
+
+            <TextView
+                android:id="@+id/tv_wallet_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="0xcC017c5Cc2EFCf2413cc5aa1C5381163C4EEB562"
+                android:textColor="@color/backgroundColor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_token_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="0"
+                    android:textColor="@color/backgroundColor"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/tv_token_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_token_balance"
+                    android:layout_alignBaseline="@+id/tv_token_balance"
+                    android:text="CMT"
+                    android:textColor="@color/backgroundColor"
+                    />
+
+
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loading_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AVLoadingIndicatorView"
+                    app:indicatorName="BallClipRotateIndicator"
+                    app:indicatorColor="@color/pointColor"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/tv_token_symbol"
+                    />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_send_token"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/gradient01"
+                android:textColor="@color/white"
+                android:text="보내기" />
+
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="새로고침" />
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="토큰 이력"
+                android:textSize="18sp"
+                android:textColor="@color/menuBackgroundColor"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_token_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

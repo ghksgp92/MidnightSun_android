@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="6dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="6dp"
+    android:id="@+id/layout_collection_item"
+    >
+
+    <TextView
+        android:id="@+id/tv_collection_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="컬렉션 이름"
+        android:textSize="12sp"
+        />
+
+    <ImageView
+        android:id="@+id/img_contain_check"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/ic_check_off"/>
+
+</LinearLayout>

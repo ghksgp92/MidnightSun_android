@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_media"
+    >
+
+    <!-- 사진이나 동영상을 보여준다 -->
+    <ImageView
+        android:id="@+id/img_media_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_transparent"
+        android:layout_centerInParent="true"
+        />
+
+    <!-- 다중선택 갤러리일 경우 선택한 순서를 표시한다 -->
+    <RelativeLayout
+        android:id="@+id/layout_selected_order"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorAlpha03"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_selected_order"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:background="@drawable/circle_filled_01"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            />
+
+    </RelativeLayout>
+
+    <!-- 동영상일 경우 시간을 표시한다. -->
+    <TextView
+        android:id="@+id/tv_video_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05:00"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="4dp"
+        />
+
+</RelativeLayout>

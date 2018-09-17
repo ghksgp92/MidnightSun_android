@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center_vertical"
+    >
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/img_movie_poster"
+        android:layout_width="90dp"
+        android:layout_height="120dp"
+        android:src="@drawable/dep_movie_poster"
+        app:siRadius="6dp"
+        android:elevation="8dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_watching_movie_info"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오션스8"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_movie_title_en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_movie_title"
+            android:text="Ocean's 8, 2018"
+            android:textColor="@color/lightGrey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_last_watching_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_movie_title_en"
+            android:text="마지막 시청 시간 "
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_last_watching_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_movie_title_en"
+            android:layout_toRightOf="@+id/label_last_watching_time"
+            tools:text="2018-08-30 14:30"
+            android:textSize="12sp"
+            />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/progressBar_play_time"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_below="@id/tv_last_watching_time"
+            android:layout_marginTop="12dp"
+
+            app:rcProgress="20"
+            app:rcSecondaryProgress="0"
+            app:rcMax="100"
+            app:rcRadius="5dp"
+            app:rcBackgroundPadding="1dp"
+            app:rcReverse="false"
+            app:rcProgressColor="@color/mainHotPink"
+            app:rcSecondaryProgressColor="@color/transparent"
+            app:rcBackgroundColor="@color/lightGrey" />
+        <TextView
+            android:id="@+id/tv_play_tme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:layout_below="@+id/progressBar_play_time"
+            android:layout_alignParentLeft="true"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02:10:24"
+            android:layout_below="@+id/progressBar_play_time"
+            android:layout_alignParentRight="true"
+            android:textSize="12sp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

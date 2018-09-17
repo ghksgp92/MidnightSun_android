@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="12dp"
+    >
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/img_profile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        tools:src="@drawable/img_user"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/img_profile"
+        />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상세메시지"
+        android:textColor="@color/pointColor2"
+        android:layout_toRightOf="@+id/img_profile"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_watch_movie_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3편 관람"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/tv_desc"
+        />
+</RelativeLayout>

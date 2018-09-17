@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "18223046377",
+    "firebase_url": "https://movie-1ed50.firebaseio.com",
+    "project_id": "movie-1ed50",
+    "storage_bucket": "movie-1ed50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18223046377:android:78f78a265b1fd9de",
+        "android_client_info": {
+          "package_name": "com.hyunju.jin.movie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18223046377-f4ihv96e97vhft6aeqr40f8f0du0h06j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGHuIA7K00CCX5R-3qv9VjsM9lRtGmMBc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

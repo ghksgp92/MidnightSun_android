@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.entertainment.CameraFaceSwapActivity"
+    >
+
+    <com.hyunju.jin.movie.camera.FaceTrackingCameraView
+        android:id="@+id/opencv_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/img_face_swap_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/face_double_mask"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imgFaceSwapMaskLeftBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/img_face_swap_mask"
+        android:background="@drawable/face_mask_border" />
+
+    <ImageView
+        android:id="@+id/imgFaceSwapMaskRightBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/img_face_swap_mask"
+        android:background="@drawable/face_mask_border" />
+
+    <ImageView
+        android:id="@+id/imgFaceSwapMaskTopBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/img_face_swap_mask"
+        android:layout_alignLeft="@+id/img_face_swap_mask"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/img_face_swap_mask"
+        android:background="@drawable/face_mask_border" />
+
+    <ImageView
+        android:id="@+id/imgFaceSwapMaskBottomBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img_face_swap_mask"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/img_face_swap_mask"
+        android:layout_below="@+id/img_face_swap_mask"
+        android:background="@drawable/face_mask_border" />
+
+    <ImageView
+        android:id="@+id/imgFaceSwapCameraShootMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaffffff"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_camera_switch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_camera_switch"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_camera_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_face_filter_camera"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_camera_face" />
+
+
+        <ImageView
+            android:id="@+id/img_face_swap_camera"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_face_change"
+            android:layout_toRightOf="@+id/img_face_filter_camera"
+            android:layout_alignParentBottom="true"
+            />
+
+
+        <ImageButton
+            android:id="@+id/img_camera_shot"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:background="@color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_camera_shot" />
+
+        <ImageView
+            android:id="@+id/img_camera_filter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/ic_camera_filter" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnFaceSwapShowCapturedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#aa000000"
+        android:padding="10dp"
+        android:src="@drawable/ic_photo_library_white_36dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        app:indicatorColor="@color/pointColor"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="카메라 필터를 준비중입니다.."
+        android:background="@color/colorAlpha01"
+        android:textColor="@color/defaultTextColor"
+        android:gravity="center"
+        android:paddingTop="78dp"
+        />
+
+</RelativeLayout>

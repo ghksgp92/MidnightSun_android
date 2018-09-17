@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="12dp"
+    >
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/img_user_profile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/user_avatar" />
+
+    <TextView
+        android:id="@+id/tv_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        tools:text="ghksgp92" />
+
+</LinearLayout>

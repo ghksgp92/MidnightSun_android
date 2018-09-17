@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/menuBackgroundColor</item>
+        <item name="colorPrimaryDark">@color/menuBackgroundColor</item>
+        <item name="colorAccent">@color/pointColor</item>
+        <item name="android:textColor">@color/defaultTextColor</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+
+    <style name="windowTitleBackgroundStyle">
+        <item name="android:background">@color/backgroundColor</item>
+    </style>
+
+    <style name="AppTheme.Launcher" parent="AppTheme" >
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+    </style>
+
+    <!-- 왜 toolbar 는 style을 통해서 title 속성들을 지정해야할까? -->
+    <!-- toolbar의 title 속성을 지정하기 위해서 반드시 아래와 같이 parent 를 지정해줘야함. -->
+    <style name="CollapsingTextAppearance" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+    <style name="CollapsingTextAppearance.Inverse" >
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/defaultGrey</item>
+    </style>
+
+    <!-- 포스팅 상세 페이지 -->
+    <style name="TextAppearance" parent="TextAppearance.AppCompat"/>
+    <style name="TextAppearance.Header">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="TextComponent"/>
+
+    <style name="TextComponent.ItemRow">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- 앱 상단 메뉴/뷰 스타일 -->
+    <style name="TopMenuStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/top_menu_height</item>
+        <item name="android:background">@color/menuBackgroundColor</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!-- 카메라 액티비티 스타일 -->
+    <style name="AppTheme.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 추천 영화 포스터 로딩 프로그래스바 -->
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/hintTextColor</item>
+    </style>
+
+</resources>

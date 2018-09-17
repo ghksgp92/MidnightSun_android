@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 앱 전체에서 상단 메뉴 높이-->
+    <dimen name="top_menu_height">42dp</dimen>
+
+    <!-- 포스팅 에디터에서 하단 메뉴 높이 -->
+    <dimen name="side_menu_height">36dp</dimen>
+
+    <!-- layout/layout_page_error 에서 사용한다. -->
+    <dimen name="activity_margin_quarter">4dp</dimen>
+    <dimen name="activity_margin_content">24dp</dimen>
+
+</resources>

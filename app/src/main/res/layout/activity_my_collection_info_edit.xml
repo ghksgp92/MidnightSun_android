@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.community.MyCollectionInfoEditActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        >
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/icon_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            app:iiv_color="@color/defaultTextColor"
+            app:iiv_icon="cmd-keyboard-backspace"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="컬렉션 이름"
+            />
+
+        <EditText
+            android:id="@+id/ed_collection_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_round_01"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/defaultTextColor"
+            android:textColorHint="@color/hintTextColor"
+            android:hint="컬렉션 이름 입력" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="컬렉션 공개 여부"
+            />
+
+            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                android:id="@+id/toggle_collection_public_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:activeBgColor="@color/mainBlue"
+                custom:activeTextColor="@android:color/white"
+                custom:inactiveBgColor="@android:color/white"
+                custom:inactiveTextColor="@android:color/black"
+                custom:separatorColor="@color/gray_very_light"
+                custom:toggleWidth="150dp"
+                custom:textToggleLeft="공개"
+                custom:textToggleRight="비공개"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="left"
+                />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_collection_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_collection_edit_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:background="@drawable/border_top_default"
+        android:textColor="@color/defaultTextColor"
+        />
+</LinearLayout>

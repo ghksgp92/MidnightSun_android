@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/menuBackgroundColor"
+        app:cardCornerRadius="3dp"
+        app:cardPreventCornerOverlap="false">
+
+        <ProgressBar
+            android:id="@+id/movie_progress"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:theme="@style/CircularProgress"/>
+
+        <ImageView
+            android:id="@+id/img_movie_poster"
+            android:layout_width="108dp"
+            android:layout_height="136dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="72dp"
+        android:paddingRight="16dp"
+        android:paddingStart="72dp"
+        android:paddingTop="8dp"
+        android:background="@color/backgroundLightColor"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_gravity="left"
+                android:background="@color/white"
+                android:layout_marginLeft="60dp"
+                android:layout_centerVertical="true"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예상 평점"
+                    android:textColor="@color/backgroundColor"
+                    />
+                <TextView
+                    android:id="@+id/tv_expected_rating"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    tools:text="4.5"
+                    android:textColor="@color/white"
+                    android:background="@color/backgroundLightColor"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_movie_year"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:alpha="0.6"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textColor="@color/defaultTextColor"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                tools:text="2009 | 한국"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            tools:text="Movie Title"/>
+
+        <TextView
+            android:id="@+id/tv_movie_desc"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/defaultTextColor"
+            android:textSize="16sp"
+            tools:text="Nowadays, user engagement is considered one of the most important metrics for the success of your app"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+
+            <ImageView
+                android:id="@+id/img_movie_trailer"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_movie_trailer"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_trailer"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="예고편 재생"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:paddingRight="12dp"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textStyle="bold"
+                android:text="|"/>
+
+            <ImageView
+                android:id="@+id/img_want_to_watch"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_heart"
+                />
+            <TextView
+                android:id="@+id/tv_want_to_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="보고싶어요"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

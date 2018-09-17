@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hyunju.jin.movie.activity.tensorflow.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+
+    <com.hyunju.jin.movie.activity.tensorflow.OverlayView
+        android:id="@+id/debug_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_camera_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="40dp"
+        >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_camera_line1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_camera_line2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/ic_camera_line3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/ic_camera_line4"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+
+
+        <ImageView
+            android:id="@+id/img_open_gallery"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_open_gallery"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

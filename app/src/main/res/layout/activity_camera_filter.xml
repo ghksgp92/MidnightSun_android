@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.entertainment.CameraFilterActivity">
+
+    <org.wysaid.view.CameraRecordGLSurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/img_camera_switch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_camera_switch"
+        android:layout_gravity="center|top"
+        />
+ 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+       
+        <RelativeLayout
+            android:id="@+id/layout_camera_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/img_face_detect_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_face"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" 
+                />
+
+            <ImageView
+                android:id="@+id/img_face_swap_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_face_change"
+                android:layout_gravity="bottom"
+                android:layout_toRightOf="@+id/img_face_detect_camera"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/img_camera_shot"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_shot"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/img_camera_filter"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_camera_filter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_filter_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAlpha01"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+</FrameLayout>

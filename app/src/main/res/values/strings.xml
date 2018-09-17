@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Midnight Sun</string>
+
+    <!-- layout/layout_page_error 에서 사용한다. -->
+    <string name="error_msg">요청 중 오류가 발생했어요.</string>
+    <string name="error_msg_detail">다시 시도해주세요.</string>
+    <string name="btn_retry">Retry</string>
+
+    <string name="movie_summary">연애정보회사 CEO 잭 퀀트(패트릭 뎀시)와 뜨거운(?) 사고를 치게 된다.
+     얼마 후 우연한 자리에서 전 남친 마크 다시(콜린 퍼스)와 마주친 브리짓 존스는
+     서로의 애틋한 마음을 다시 한번 확인하게 된다.
+     인생 최고의 전성기를 맞은 브리짓 존스에게 예상치 못한 뜻밖의 대위기가 닥치고
+     놓칠 수 없는 두 남자 사이에서 갈등하게 되는데…
+    </string>
+
+    <!-- FancyButton 에서 사용할 버튼 값 -->
+    <string name="ic_plus">&#xf067;</string>
+    <string name="ic_heart_empty">&#xf004;</string>
+
+    <!-- 텐서플로우 Inception 을 사용하는 카메라에서 사용함 -->
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+    <!-- Wikitude 라이센스 -->
+    <!--
+    <string name="wikitude_license_key">x3/36g5XTRmEVQA4H+qQTuTpOBkroqDUiI0221w8qkeGS4vioHFegudsldoKp/uitjpnBtcpuzqTN/ZjMmvLrZmzs4q6Ym9O2Alfj4fvJUSTRt/7fO3NwjrcvijHUHszLVEcwpv7FtksyQZQaWwobSCHVjjHSbVMSON/44tf3I1TYWx0ZWRfX7sUcxF8oNbngBzJyy4b5LSTxvHcEUqinG0ONhHVkb4+PchSM5g7AT6YFXu3U2aTpH/Ed9doPp7Gyhb+aUYbnT3vGZ6OPWreJyPbCjLRDb6eF612ghZk5IF1G0HmjZxbvPOGNqjdnwBocYAO7CAiviQtGdpz7f4uMBCAaOK/oCyawo8BnQWUTSPHxQDCAOJ9RGAPwU11oowAnliLe8gp8K2wDAZ0+eOhw4/sVsRUVUdLR9Vv9nL6sqXqDs8hbJkOmbAZSyWd+KfrG8HvKZ2nqkjxT+IOi4KcyoSkGKzKjgxBY2V6iOfhCQYjIfJeSfDlGpMphr8hahDo+sYNP2lF83ZtmPZtPK+hsIhQqBIVR1x9JvsIeczQWaYC+6Fo1Bt0D6m9yzfdUjOFQ1z0JBYcCBf9mkjLwzsLBnKTEdBx5s1nNBksoVh4OSrFFIQI8dKWLNh7+zoZB2lMUQzxNyzwaCn2+iVDtgcpcTtD/F/CajYHFYVqgy3deHA9HZWoZyV8MGISmTsBM5sGGqAK/8DhJwHjMZe7rE3bxA==</string>
+    -->
+    <string name="wikitude_license_key_sdk">x3/36g5XTRmEVQA4H+qQTuTpOBkroqDUiI0221w8qkeGS4vioHFegudsldoKp/uitjpnBtcpuzqTN/ZjMmvLrZmzs4q6Ym9O2Alfj4fvJUSTRt/7fO3NwjrcvijHUHszLVEcwpv7FtksyQZQaWwobSCHVjjHSbVMSON/44tf3I1TYWx0ZWRfX7sUcxF8oNbngBzJyy4b5LSTxvHcEUqinG0ONhHVkb4+PchSM5g7AT6YFXu3U2aTpH/Ed9doPp7Gyhb+aUYbnT3vGZ6OPWreJyPbCjLRDb6eF612ghZk5IF1G0HmjZxbvPOGNqjdnwBocYAO7CAiviQtGdpz7f4uMBCAaOK/oCyawo8BnQWUTSPHxQDCAOJ9RGAPwU11oowAnliLe8gp8K2wDAZ0+eOhw4/sVsRUVUdLR9Vv9nL6sqXqDs8hbJkOmbAZSyWd+KfrG8HvKZ2nqkjxT+IOi4KcyoSkGKzKjgxBY2V6iOfhCQYjIfJeSfDlGpMphr8hahDo+sYNP2lF83ZtmPZtPK+hsIhQqBIVR1x9JvsIeczQWaYC+6Fo1Bt0D6m9yzfdUjOFQ1z0JBYcCBf9mkjLwzsLBnKTEdBx5s1nNBksoVh4OSrFFIQI8dKWLNh7+zoZB2lMUQzxNyzwaCn2+iVDtgcpcTtD/F/CajYHFYVqgy3deHA9HZWoZyV8MGISmTsBM5sGGqAK/8DhJwHjMZe7rE3bxA==</string>
+</resources>

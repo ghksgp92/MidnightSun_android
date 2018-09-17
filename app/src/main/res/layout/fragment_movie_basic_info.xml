@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상세정보"
+                android:textColor="@color/mainColor"
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_ageLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전체관람가" />
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2002년" />
+
+            <TextView
+                android:id="@+id/tv_production_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="영국, 미국" />
+
+
+            <TextView
+                android:id="@+id/tv_movie_running_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="124분" />
+
+            <TextView
+                android:id="@+id/tv_movie_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="코미디, 멜로/로맨스" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="줄거리"
+                android:textColor="@color/mainColor"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_summary" />
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.tensorflow.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:background="@color/colorAlpha01"
+        >
+
+        <!-- 이미지 인식 전 보여준다. -->
+        <TextView
+            android:id="@+id/tv_search_before_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="영화 이미지를 화면에 비추면 \n영화를 찾아드릴게요."
+            android:textColor="@color/defaultTextColor"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            />
+
+        <!-- 이미지 인식 및 정보 검색 중에 보여준다. -->
+        <RelativeLayout
+            android:id="@+id/layout_searching"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            >
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/indicator_image_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:indicatorColor="@color/pointColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미지 인식 중입니다.."
+                android:textColor="@color/pointColor"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/indicator_image_search"
+                />
+
+        </RelativeLayout>
+
+        <!-- 영화 검색 완료 후 보여준다. -->
+        <RelativeLayout
+            android:id="@+id/layout_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_search_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="검색 결과는?"
+                android:textColor="@color/pointColor"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

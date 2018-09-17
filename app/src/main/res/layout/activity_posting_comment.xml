@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_container"
+    tools:context=".activity.posting.PostingCommentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/border_bottom_light_grey"
+        >
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/icon_menu_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="4dp"
+            android:layout_alignParentLeft="true"
+            app:iiv_color="@color/lightGrey"
+            app:iiv_icon="cmd-close" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="댓글"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_posting_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+        <com.mikepenz.iconics.view.IconicsImageView
+            android:id="@+id/icon_menu_refresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="4dp"
+            android:layout_alignParentRight="true"
+            app:iiv_color="@color/lightGrey"
+            app:iiv_icon="cmd-refresh" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_posting_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        />
+
+        <LinearLayout
+            android:id="@+id/layout_posting_comment_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="댓글이 없습니다."
+                android:textColor="@color/lightGrey"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_posting_comment_edit"
+        android:padding="4dp"
+        >
+
+        <EditText
+            android:id="@+id/ed_posting_comment_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:hint="댓글을 입력하세요"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_toLeftOf="@+id/btn_add_posting_comment"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_add_posting_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            fancy:fb_text="입력"
+            fancy:fb_textSize="10sp"
+            fancy:fb_radius="10dp"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/white"
+            app:fb_textColor="@color/mainColor"
+            app:fb_borderColor="@color/mainColor" />
+
+    </RelativeLayout>
+</LinearLayout>

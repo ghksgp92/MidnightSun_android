@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:id="@+id/layout_container"
+        android:background="@drawable/border_bottom_and_top"
+        >
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/img_movie_poster"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:src="@color/lightBackground"
+            android:layout_margin="8dp"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:focusable="true"
+            app:siRadius="6dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_movie_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_movie_poster"
+            android:paddingLeft="12dp"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 어깨 위 고양이, 밥" />
+
+            <TextView
+                android:id="@+id/tv_movie_title_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A Street Cat Named Bob, 2016"
+                android:layout_below="@+id/tv_movie_title"
+                />
+
+            <TextView
+                android:id="@+id/tv_productionCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영국"
+                android:layout_below="@+id/tv_movie_title_en"
+                />
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#d02c83"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="클릭하면 상세페이지로 이동"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#d02c83"
+        android:layout_marginTop="80dp"
+        android:textSize="12sp"
+        />
+
+    </RelativeLayout>
+</LinearLayout>

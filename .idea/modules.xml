@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MOVIE.iml" filepath="$PROJECT_DIR$/MOVIE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cameraLibrary/cameraLibrary.iml" filepath="$PROJECT_DIR$/cameraLibrary/cameraLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/editor/editor.iml" filepath="$PROJECT_DIR$/editor/editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/janusclientapi/janusclientapi.iml" filepath="$PROJECT_DIR$/janusclientapi/janusclientapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary/openCVLibrary.iml" filepath="$PROJECT_DIR$/openCVLibrary/openCVLibrary.iml" />
+    </modules>
+  </component>
+</project>

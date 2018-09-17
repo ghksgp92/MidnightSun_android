@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    tools:context=".activity.movie.MovieDetailActivity"
+    android:id="@+id/layout_container"
+    >
+
+    <!-- layout_app_bar 안의 View 는 스크롤 시 사라지게 된다. -->
+    <!-- 예외적으로 toolbar_movie_detail 와 layout_tab_movie_info_category 는 화면 상단에 남아있다.-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        ​
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:title="오션스8"
+            app:collapsedTitleTextAppearance="@style/CollapsingTextAppearance.Inverse"
+            app:expandedTitleMarginBottom="94dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?colorPrimary"
+            android:textSize="30sp"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_movie_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@color/transparent"
+                app:navigationIcon="@drawable/ic_back_white"
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_movie"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:contentPaddingTop="4dp"
+                app:contentPaddingBottom="4dp"
+                app:contentPaddingLeft="4dp"
+                app:contentPaddingRight="12dp"
+                app:cardCornerRadius="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="4dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginLeft="150dp"
+                        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                        <TextView
+                            android:id="@+id/tv_movie_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:text="오션스8"
+                            android:textSize="16sp"
+                            android:textColor="@color/defaultGrey"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_movie_title_en"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                            android:text="Ocean's 8, 2018"
+                            android:textSize="12sp"
+                            android:textColor="@color/lightGrey"
+                            android:layout_below="@+id/tv_movie_title"
+                            android:layout_alignParentLeft="true"
+                            />
+
+                        <mehdi.sakout.fancybuttons.FancyButton
+                            android:id="@+id/btn_streaming"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_movie_title_en"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            fancy:fb_text="PLAY"
+                            fancy:fb_textSize="12sp"
+                            fancy:fb_radius="15dp"
+                            fancy:fb_borderWidth="2dp"
+                            fancy:fb_defaultColor="@color/white"
+                            fancy:fb_iconPosition="left"
+                            fancy:fb_fontIconResource="&#xf144; "
+                            app:fb_textColor="@color/mainColor"
+                            app:fb_borderColor="@color/mainColor" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout_want_to_watch"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                            android:id="@+id/icon_want_to_watch"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:padding="4dp"
+                            app:iiv_color="@color/defaultGrey"
+                            app:iiv_icon="cmd-heart-outline" />
+
+                            <TextView
+                                android:id="@+id/tv_want_to_watch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="보고싶어요"
+                                android:textSize="12sp"
+                                android:layout_below="@+id/icon_want_to_watch"
+                                android:textColor="@color/defaultGrey"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_add_collection"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                                android:id="@+id/icon_add_collection"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:padding="4dp"
+                                app:iiv_color="@color/defaultGrey"
+                                app:iiv_icon="cmd-plus-circle" />
+
+                            <TextView
+                                android:id="@+id/tv_add_collection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="컬렉션추가"
+                                android:textSize="12sp"
+                                android:textColor="@color/defaultGrey"
+                                android:layout_below="@+id/icon_want_to_watch"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_comment_write"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            >
+
+                            <com.mikepenz.iconics.view.IconicsImageView
+                                android:id="@+id/icon_comment_write"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:padding="4dp"
+                                app:iiv_color="@color/defaultGrey"
+                                app:iiv_icon="cmd-star-circle" />
+
+                            <TextView
+                                android:id="@+id/tv_comment_write"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="평가하기"
+                                android:textSize="12sp"
+                                android:textColor="@color/defaultGrey"
+                                android:layout_below="@+id/icon_comment_write"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/img_movie_poster"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:src="@drawable/dep_movie_poster"
+                android:elevation="8dp"
+                app:layout_scrollFlags="scroll"
+                app:layout_anchorGravity="left"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="40dp"
+                app:siRadius="8dp"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        ​​
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_movie_info_category"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabTextColor="@color/defaultTextColor"
+            app:tabSelectedTextColor="@color/pointColor"
+            app:tabIndicatorColor="@color/pointColor"
+            app:tabIndicatorHeight="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager_category_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="8dp"
+        />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="visible"
+        app:indicatorName="BallClipRotateIndicator"
+        app:indicatorColor="@color/pointColor"
+        android:layout_gravity="center"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

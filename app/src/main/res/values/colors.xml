@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#323233</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mainBlue">#1f6cb4</color>
+    <color name="mainPurple">#864597</color>
+    <color name="mainHotPink">#d02c83</color>
+
+    <!-- Dark 테마 적용중 -->
+    <color name="menuBackgroundColor">#222222</color>
+    <color name="backgroundColor">#2b2b2b</color>
+    <color name="backgroundLightColor">#3a3a3a</color>
+    <color name="defaultTextColor">#C6C6C6</color>
+    <color name="hintTextColor">#595c63</color>
+    <color name="pointColor">#d02c83</color>
+    <color name="pointColor2">#87c2e8</color>
+
+    <color name="menuTextColor">#C6C6C6</color>
+
+<!--
+    Dark 테마
+    <color name="darkThemeMenuBackgroundColor">#222222</color>
+    <color name="darkThemeBackgroundColor">#2b2b2b</color>
+    <color name="darkThemeBackgroundLightColor">#3a3a3a</color>
+    <color name="darkThemeDefaultTextColor">#C6C6C6</color>
+    <color name="darkThemeHintTextColor">#595c63</color>
+    <color name="darkThemePointColor">#FF9C68</color>
+    <color name="darkThemePointColor2">#87c2e8</color>
+-->
+    <!-- Light 테마 -->
+    <color name="lightThemeMenuBackgroundColor">#222222</color>
+    <color name="lightThemeBackgroundColor">#2b2b2b</color>
+    <color name="lightThemeBackgroundLightColor">#3a3a3a</color>
+    <color name="lightThemeDefaultTextColor">#C6C6C6</color>
+    <color name="lightThemeHintTextColor">#595c63</color>
+    <color name="lightThemePointColor">#FF9C68</color>
+    <color name="lightThemePointColor2">#87c2e8</color>
+
+    <color name="mainColor">#1f6cb4</color>
+
+    <color name="white">#ffffff</color>
+    <color name="defaultGrey">#595c63</color>
+    <color name="lightGrey">#7e7f81</color>
+    <color name="borderGrey">#b2b3b4</color>
+
+    <color name="transparent">@android:color/transparent</color>
+
+    <color name="colorBackground02">#ffffff</color>
+    <color name="colorBackground04">#ffffff</color>
+
+    <color name="colorFont02">#FF5733</color>
+    <color name="colorFont03">#e3000000</color>
+
+    <color name="colorAlpha00">#ddffffff</color>
+    <color name="colorAlpha01">#70000000</color>
+    <color name="colorAlpha02">#66ffffff</color>
+    <color name="colorAlpha03">#4d000000</color>
+    <color name="colorAlpha04">#66ffffff</color>
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hyunju.jin.movie.activity.user.AdditionalInfoActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_menu_height"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="18sp"
+            android:text="추가 정보 입력" />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            custom:srcCompat="@drawable/ic_next"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                />
+
+            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                android:id="@+id/toggle_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:activeBgColor="@color/pointColor"
+                custom:activeTextColor="@color/backgroundColor"
+                custom:inactiveBgColor="@color/backgroundLightColor"
+                custom:inactiveTextColor="@color/defaultTextColor"
+                custom:separatorColor="@color/gray_very_light"
+                custom:toggleWidth="80dp"
+                custom:textToggleLeft="남자"
+                custom:textToggleRight="여자"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="left"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                />
+
+            <EditText
+                android:id="@+id/ed_birth_year"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="ex) 1992"
+                android:maxLength="4"
+                android:inputType="number"
+                android:textColorHint="@color/hintTextColor"
+                android:textColor="@color/defaultTextColor"
+                />
+
+            <Spinner
+                android:id="@+id/spinner_birth_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="선호장르"
+                android:layout_marginBottom="8dp"
+                />
+
+            <com.adroitandroid.chipcloud.ChipCloud
+                android:id="@+id/chip_cloud_movie_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>

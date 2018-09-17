@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.recommend.RecommendMovieActivity">
+
+    <!-- 영화 검색 창 -->
+    <RelativeLayout
+        style="@style/TopMenuStyle"
+        >
+
+        <!-- 하트 이모티콘이라도 넣어줘.. -->
+        <TextView
+            android:id="@+id/tv_show_my_report"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="취향보고서"
+            android:textColor="@color/pointColor"
+            android:background="@color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            />
+
+        <!-- 하트 이모티콘이라도 넣어줘.. -->
+        <TextView
+            android:id="@+id/btn_add_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="평점늘리기"
+            android:textColor="@color/pointColor"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_recommend_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <include layout="@layout/layout_error"/>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/AVLoadingIndicatorView"
+            android:id="@+id/loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:indicatorName="BallClipRotateIndicator"
+            app:indicatorColor="@color/pointColor"
+            android:layout_gravity="center"
+            />
+
+    </FrameLayout>
+    <!-- 하단 메뉴 -->
+    <include layout="@layout/layout_main_bottom_menu"/>
+
+</LinearLayout>

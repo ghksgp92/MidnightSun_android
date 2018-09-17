@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hyunju.jin.movie.activity.user.SignUpActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient01"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="회원가입"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="email"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="email"
+            android:inputType="textPersonName"
+            android:background="@drawable/round_filled_01"
+            android:textColorHint="@color/defaultGrey"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/validate_msg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="이미 사용중인 이메일입니다."
+            android:textColor="@color/colorFont02"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="id"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/ed_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="id"
+            android:textColorHint="@color/defaultGrey"
+            android:padding="8dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/round_filled_01"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/validate_msg_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="이미 사용중인 이름입니다."
+            android:textColor="@color/colorFont02"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="password"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <EditText
+            android:id="@+id/ed_pwd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:textColorHint="@color/defaultGrey"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:inputType="textPassword"
+            android:background="@drawable/round_filled_01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/ed_pwd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="비밀번호 확인"
+            android:textColorHint="@color/defaultGrey"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:inputType="textPassword"
+            android:background="@drawable/round_filled_01"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/validate_msg_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="영문, 숫자, 특수문자"
+            android:textColor="@color/colorFont02"
+            android:textSize="10dp"/>
+
+        <!--
+        <RadioGroup
+            android:id="@+id/rgroup_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/rbtn_sex_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여자" />
+
+            <RadioButton
+                android:id="@+id/rbtn_sex_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남자" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/validate_msg_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="성별을 선택해주세요."
+            android:textColor="@color/colorFont02"
+            android:textSize="10dp"/>
+
+            -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        />
+
+</LinearLayout>
+

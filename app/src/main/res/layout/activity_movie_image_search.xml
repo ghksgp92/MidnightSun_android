@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.movie.MovieImageSearchActivity" >
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_transparent"/>
+
+        <!-- 이미지 인식 및 정보 검색 중에 보여준다. -->
+        <!-- 이미지 위에 효과를 주고싶은데.. -->
+        <RelativeLayout
+            android:id="@+id/layout_searching"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorAlpha03"
+            >
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/indicator_image_search"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                app:indicatorColor="@color/pointColor"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_searching_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영화를 찾고있어요."
+                android:textColor="@color/defaultTextColor"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/indicator_image_search"
+                />
+
+        </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_img_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentPaddingTop="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingRight="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_search_result_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="검색 결과"
+                android:textColor="@color/backgroundColor"
+                android:gravity="center_horizontal"
+                android:padding="12dp"
+                android:background="@drawable/border_bottom_white"
+                />
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="영화 제목"
+                android:textSize="20sp"
+                android:textColor="@color/backgroundColor"
+                android:gravity="center_horizontal"
+                android:padding="12dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                >
+
+                <Button
+                    android:id="@+id/btn_close"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="닫기"
+                    android:textColor="@color/menuBackgroundColor"
+                    android:background="@drawable/round_filled_02"
+                    android:layout_marginRight="8dp"
+                    />
+
+                <Button
+                    android:id="@+id/btn_detail_movie"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="상세정보"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_filled_03"
+                    android:layout_marginLeft="8dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    
+  
+
+</FrameLayout>
